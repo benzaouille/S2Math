@@ -1,0 +1,23 @@
+cmake_minimum_required(VERSION 3.8)
+
+project(S2Math)
+
+
+
+include_directories(include)
+add_definitions(-DDATA_DIR="${PROJECT_SOURCE_DIR}")
+
+add_executable(
+        S2Math
+
+        src/main.cpp
+        include/Vec2.hpp
+        include/Vec3.hpp
+        include/Vec4.hpp
+        include/Mat2.hpp
+        include/Mat3.hpp
+        include/Mat4.hpp
+        include/Transformation.hpp
+
+)
+target_link_libraries(S2Math)
